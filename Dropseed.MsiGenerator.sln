@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropseed.MsiGenerator", "Dropseed.MsiGenerator\Dropseed.MsiGenerator.csproj", "{DC32519F-2F2F-46FE-8175-7EEE902F4543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropseed.MsiGenerator.Tests", "Dropseed.MsiGenerator.Tests\Dropseed.MsiGenerator.Tests.csproj", "{F2A3DB62-1394-47FC-86FC-B3E6393743B9}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC32519F-2F2F-46FE-8175-7EEE902F4543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC32519F-2F2F-46FE-8175-7EEE902F4543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC32519F-2F2F-46FE-8175-7EEE902F4543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC32519F-2F2F-46FE-8175-7EEE902F4543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2A3DB62-1394-47FC-86FC-B3E6393743B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2A3DB62-1394-47FC-86FC-B3E6393743B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2A3DB62-1394-47FC-86FC-B3E6393743B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2A3DB62-1394-47FC-86FC-B3E6393743B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
