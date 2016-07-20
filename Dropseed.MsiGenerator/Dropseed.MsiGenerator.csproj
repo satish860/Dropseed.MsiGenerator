@@ -62,8 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IInstallerConfiguration.cs" />
+    <Compile Include="InstallerConfiguration.cs" />
+    <Compile Include="MsiBuilder.cs" />
     <Compile Include="MsiGenerator.cs" />
     <Compile Include="MsiGeneratorConfiguration.cs" />
+    <Compile Include="ProjectBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
