@@ -60,13 +60,19 @@
       <HintPath>..\packages\WixSharp.bin.1.0.41.0\lib\WixSharp.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="YamlDotNet, Version=3.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YamlDotNet.3.9.0\lib\net35\YamlDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IInstallerConfiguration.cs" />
     <Compile Include="InstallerConfiguration.cs" />
     <Compile Include="MsiBuilder.cs" />
+    <Compile Include="MsiBuilderOrchestration.cs" />
     <Compile Include="MsiGenerator.cs" />
     <Compile Include="MsiGeneratorConfiguration.cs" />
+    <Compile Include="DirectoryBuilder.cs" />
     <Compile Include="ProjectBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

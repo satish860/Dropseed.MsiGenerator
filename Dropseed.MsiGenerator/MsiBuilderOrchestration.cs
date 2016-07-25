@@ -7,11 +7,12 @@ using WixSharp;
 
 namespace Dropseed.MsiGenerator
 {
-    public class ProjectBuilder
+    public class MsiBuilderOrchestration
     {
-        public static Project Build(MsiBuilder builder)
+        public Project Orchestrate(string filePath)
         {
-            return new Project { Name = builder.Name };
+            var msibuilder = MsiBuilder.Build(filePath);
+            return ProjectBuilder.Build(msibuilder);
         }
     }
 }
