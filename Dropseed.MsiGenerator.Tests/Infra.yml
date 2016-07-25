@@ -1,1 +1,3 @@
 ﻿Name: DropSeed
+SourceDirectory : ProgramFiles%\DropSeed\DropSeed.Minions
+DestinationDirectory : Release\Debug\*.*

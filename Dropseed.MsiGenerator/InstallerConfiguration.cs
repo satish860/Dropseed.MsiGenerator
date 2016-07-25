@@ -10,14 +10,14 @@ namespace Dropseed.MsiGenerator
             return AddConfiguration(builder);
         }
 
-        public Project BuildProject(object ConfigurationBuilder)
+        public Project BuildProject(object ConfigurationBuilder,Project project)
         {
-            throw new NotImplementedException();
+            return BuildComponentWithProject((T)ConfigurationBuilder, project);
         }
 
         public abstract T AddConfiguration(MsiBuilder builder);
 
-        public abstract Project BuildProject(T builder);
+        public abstract Project BuildComponentWithProject(T builder,Project project);
         
     }
 }

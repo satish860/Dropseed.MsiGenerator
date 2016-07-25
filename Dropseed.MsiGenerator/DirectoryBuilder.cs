@@ -11,10 +11,14 @@ namespace Dropseed.MsiGenerator
     {
         public override Dir AddConfiguration(MsiBuilder builder)
         {
-            throw new NotImplementedException();
+            var targetPath = @"%" + builder.SourceDirectory;
+            var sourceDirectory = new DirFiles(builder.DestinationDirectory);
+            var targetDirectory = new Dir(targetPath, sourceDirectory);
+            return targetDirectory;
+           
         }
 
-        public override Project BuildProject(Dir builder)
+        public override Project BuildComponentWithProject(Dir builder,Project project)
         {
             throw new NotImplementedException();
         }

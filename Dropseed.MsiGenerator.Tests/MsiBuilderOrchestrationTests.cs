@@ -7,13 +7,18 @@ using Should;
 
 namespace Dropseed.MsiGenerator.Tests
 {
-    public class ProjectBuilderTests
+    public class MsiBuilderOrchestrationTests
     {
         public void ShouldBeAbleTakeTheFilePathAndBuildProjectOutProject()
         {
             MsiBuilderOrchestration orchestration = new MsiBuilderOrchestration();
             var project=orchestration.Orchestrate("Infra.yml");
             project.Name.ShouldEqual("DropSeed");
+        }
+
+        public void ShouldBeAbleAddADirectoryToTheProject()
+        {
+
         }
     }
 }

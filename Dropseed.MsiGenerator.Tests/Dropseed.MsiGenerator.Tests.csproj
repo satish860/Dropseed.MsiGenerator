@@ -76,7 +76,7 @@
   <ItemGroup>
     <Compile Include="MsiGeneratorConfigurationTests.cs" />
     <Compile Include="MsiGeneratorTests.cs" />
-    <Compile Include="ProjectBuilderTests.cs" />
+    <Compile Include="MsiBuilderOrchestrationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="YamlMSIBuilderTests.cs" />
   </ItemGroup>

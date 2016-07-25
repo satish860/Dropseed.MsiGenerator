@@ -15,5 +15,14 @@ namespace Dropseed.MsiGenerator.Tests
             MsiBuilder builder=MsiBuilder.Build(filePath);
             builder.Name.ShouldEqual("DropSeed");
         }
+
+        public void ShouldBeAbleConvertYamlForProjectWithDirectory()
+        {
+            var filePath = "Infra.yml";
+            MsiBuilder builder = MsiBuilder.Build(filePath);
+            builder.Name.ShouldEqual("DropSeed");
+            builder.SourceDirectory.ShouldEqual(@"ProgramFiles%\DropSeed\DropSeed.Minions");
+            builder.DestinationDirectory.ShouldEqual(@"Release\Debug\*.*");
+        }
     }
 }

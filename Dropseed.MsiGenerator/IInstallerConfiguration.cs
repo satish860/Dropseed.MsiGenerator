@@ -11,7 +11,7 @@ namespace Dropseed.MsiGenerator
     {
         object Configure(MsiBuilder builder);
 
-        Project BuildProject(object ConfigurationBuilder);
+        Project BuildProject(object ConfigurationBuilder,Project project);
     }
 
 }

@@ -13,12 +13,13 @@ namespace Dropseed.MsiGenerator
     {
         public string Name { get; set; }
 
+        public string SourceDirectory { get; set; }
+
+        public string DestinationDirectory { get; set; }
+
         public static MsiBuilder Build(string filePath)
         {
             Deserializer deserializer = new Deserializer();
-            var stringWriter = new StringWriter();
-            Serializer seri = new Serializer();
-            seri.Serialize(stringWriter, new MsiBuilder { Name="DropSeed"});
             var document =new StringReader(File.ReadAllText(filePath));
             return deserializer.Deserialize<MsiBuilder>(document);
         }
