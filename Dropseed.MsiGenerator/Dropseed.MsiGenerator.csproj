@@ -66,6 +66,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AfterActionBuilder.cs" />
+    <Compile Include="BeforeActionBuilder.cs" />
     <Compile Include="IInstallerConfiguration.cs" />
     <Compile Include="InstallerConfiguration.cs" />
     <Compile Include="MsiBuilder.cs" />

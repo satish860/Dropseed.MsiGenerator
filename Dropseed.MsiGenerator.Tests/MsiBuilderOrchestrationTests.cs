@@ -18,7 +18,17 @@ namespace Dropseed.MsiGenerator.Tests
 
         public void ShouldBeAbleAddADirectoryToTheProject()
         {
+            MsiBuilderOrchestration orchestration = new MsiBuilderOrchestration();
+            var project=orchestration.Orchestrate("Infra.yml");
+            project.Dirs.ShouldNotBeNull();
+        }
 
+        public void ShouldBeAbleAddBuildAction()
+        {
+            MsiBuilderOrchestration orchestration = new MsiBuilderOrchestration();
+            var project = orchestration.Orchestrate("Infra.yml");
+            project.Actions.ShouldNotBeNull();
+            project.Actions.Count().ShouldBeGreaterThanOrEqualTo(2);
         }
     }
 }

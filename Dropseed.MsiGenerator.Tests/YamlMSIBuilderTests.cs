@@ -24,5 +24,23 @@ namespace Dropseed.MsiGenerator.Tests
             builder.SourceDirectory.ShouldEqual(@"ProgramFiles%\DropSeed\DropSeed.Minions");
             builder.DestinationDirectory.ShouldEqual(@"Release\Debug\*.*");
         }
+
+        public void ShouldBeAbleToGetBeforeBuild()
+        {
+            var filePath = "Infra.yml";
+            MsiBuilder builder = MsiBuilder.Build(filePath);
+            builder.Name.ShouldEqual("DropSeed");
+            builder.BeforeBuild.ShouldEqual("WixGenerator.exe");
+            builder.BeforeBuildArgument.ShouldEqual("install");
+        }
+
+        public void ShouldBeAbleToGetAfterBuild()
+        {
+            var filePath = "Infra.yml";
+            MsiBuilder builder = MsiBuilder.Build(filePath);
+            builder.Name.ShouldEqual("DropSeed");
+            builder.AfterBuild.ShouldEqual("WixGenerator.exe");
+            builder.AfterBuildArgument.ShouldEqual("uninstall");
+        }
     }
 }

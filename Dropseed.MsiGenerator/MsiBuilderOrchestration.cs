@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WixSharp;
+﻿using WixSharp;
 
 namespace Dropseed.MsiGenerator
 {
@@ -12,7 +7,16 @@ namespace Dropseed.MsiGenerator
         public Project Orchestrate(string filePath)
         {
             var msibuilder = MsiBuilder.Build(filePath);
-            return ProjectBuilder.Build(msibuilder);
+            Project project = ProjectBuilder.Build(msibuilder);
+            DirectoryBuilder directoryBuilder = new DirectoryBuilder();
+            var dir=directoryBuilder.AddConfiguration(msibuilder);
+            directoryBuilder.BuildComponentWithProject(dir, project);
+            BeforeActionBuilder actionBuilder = new BeforeActionBuilder();
+            var beforeAction=actionBuilder.AddConfiguration(msibuilder);
+            AfterActionBuilder AfteractionBuilder = new AfterActionBuilder();
+            var afterAction = AfteractionBuilder.AddConfiguration(msibuilder);
+            project.Actions = new[] { beforeAction, afterAction };
+            return project;
         }
     }
 }

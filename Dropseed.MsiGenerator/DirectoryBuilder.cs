@@ -15,12 +15,13 @@ namespace Dropseed.MsiGenerator
             var sourceDirectory = new DirFiles(builder.DestinationDirectory);
             var targetDirectory = new Dir(targetPath, sourceDirectory);
             return targetDirectory;
-           
+
         }
 
-        public override Project BuildComponentWithProject(Dir builder,Project project)
+        public override Project BuildComponentWithProject(Dir builder, Project project)
         {
-            throw new NotImplementedException();
+            project.Dirs = new[] { builder };
+            return project;
         }
     }
 }
