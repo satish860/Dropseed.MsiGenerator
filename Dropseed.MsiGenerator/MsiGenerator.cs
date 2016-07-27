@@ -9,15 +9,10 @@ namespace Dropseed.MsiGenerator
 {
     public class MsiGenerator
     {
-        private string sourcePath;
-        private string destinationPath;
-
         public string Build(string name)
         {
             Project project = new Project(name);
             return Compiler.BuildMsi(project);
         }
-
-       
     }
 }

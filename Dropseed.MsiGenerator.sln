@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropseed.MsiGenerator", "Dr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropseed.MsiGenerator.Tests", "Dropseed.MsiGenerator.Tests\Dropseed.MsiGenerator.Tests.csproj", "{F2A3DB62-1394-47FC-86FC-B3E6393743B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dropseed.MsiGenerator.Console", "Dropseed.MsiGenerator.Console\Dropseed.MsiGenerator.Console.csproj", "{ED53E43F-21A8-44E9-9424-38B65B676F64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F2A3DB62-1394-47FC-86FC-B3E6393743B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2A3DB62-1394-47FC-86FC-B3E6393743B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2A3DB62-1394-47FC-86FC-B3E6393743B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED53E43F-21A8-44E9-9424-38B65B676F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED53E43F-21A8-44E9-9424-38B65B676F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED53E43F-21A8-44E9-9424-38B65B676F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED53E43F-21A8-44E9-9424-38B65B676F64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

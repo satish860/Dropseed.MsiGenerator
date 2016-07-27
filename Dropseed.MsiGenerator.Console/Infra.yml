@@ -1,0 +1,7 @@
+﻿Name: DropSeed
+SourceDirectory : ProgramFiles%\DropSeed\DropSeed.Minions
+DestinationDirectory : Release\Debug\*.*
+BeforeBuild: WixGenerator.exe
+BeforeBuildArgument: install
+AfterBuild: WixGenerator.exe
+AfterBuildArgument: uninstall
